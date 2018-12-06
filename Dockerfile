@@ -19,7 +19,7 @@ RUN apt-get update -y \
 ENV PANDOC_VERSION "1.19.2.1"
 
 # install pandoc
-RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
+RUN cabal update && cabal install pandoc-${PANDOC_VERSION} pandoc-citeproc pandoc-crossref
 
 WORKDIR /source
 
